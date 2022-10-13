@@ -4,17 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <link rel="stylesheet" type="text/css" href="page.css"/>
+        <link  href="usuario.js">
         
     </head>
     <body>
-         <h2>
-            <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
-           <div class="container-fluid">
-            <header>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div id="interface">
+        <header id="cabecalho">
+            <nav id="menu" >
+                <ul type="disc">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Página Principal</a>
                     </li>
@@ -28,33 +26,26 @@
                     <a class="nav-link active" aria-current="page" href="get.html">Mostrar</a>
                   </li>
                 </ul>
-              </div>
-            </header>
-            </div>
-        </h2>
-          </nav>
+          </nav> 
+        </header>
       <h1  class="text-center">Listar</h1>
-<h3>Lista de estados</h3>
-    <!-- A table para mostrar os estados-->
+    <h2>
+        <h1>Estados:</h1>
     <table id="table-estado" class="table table-striped" style="width:100%">
-        <!--cabeçalho-->
         <thead>
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">nomeEstado</th>
-             
-            </tr>
+            <tr><td scope="col">Id</td><td scope="col">Nome do Estado</td></tr>
+            
         </thead>
+
         <!--Corpo do tbody. E gerido pelo js-->
         <tbody id="usuarioDados">
         </tbody>
+    
     </table>
-    <!--Caminho para o JS, pasta e arquivo-->
-    <script src="js/usuario.js" ></script>
+</h2>
 
-</html>
 
-<script src="js/usuario.js" ></script>
-
+</div>
 </body>
+<script src="usuario.js" ></script>
 </html>

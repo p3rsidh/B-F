@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <link href="usuario.js">
         <link rel="stylesheet" type="text/css" href="page.css"/>
     </head>
     <body>
@@ -27,19 +27,21 @@
                 </ul>
           </nav> 
         </header>
-<!--Titulo-->
+
 
 <h1>
     Cadastro de Usuário
-<form id="Cliente">
+</h1>
+<h2>
+<form id="Cliente" method="post" action="localhost8080/usuario">
     <div class="mb-3">
         <label class="form-label"> Nome do Cliente</label>
-        <input type="text" name="nomeCliente" class="form-control" id="nomeCliente" required>
-    </div>
-    <button type="submit" class="btn btn-lg btn-primary m-2 d-grid gap-2 col-4 mx-auto">Enviar</button>
-
+        <input type="text" name="nomeDoCliente" class="form-control" id="nomeCliente" required>
+    <button type="submit"  class="btn btn-lg btn-primary m-2 d-grid gap-2 col-4 mx-auto">Enviar</button>
+</div>
 </form>
-</h1>
+</h2>
 </div>
 </body>
+
 </html>
