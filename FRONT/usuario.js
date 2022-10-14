@@ -3,14 +3,17 @@ const formE = document.getElementById('estado-form')
 const botao = document.querySelector('#estadoCad')
 const botaoMostrar = document.querySelector('#mostrar')
 const table = document.querySelector('#usuarioDados')
-const form = document.getElementById("Cliente")
+// const form = document.querySelector("Cliente")
 
+
+
+botaoMostrar.addEventListener('click', mostrarTudo())
 
 
 //mostrar estados
-table.addEventListener('load', (e) =>{
-    const table = table.value;
-    console.log(table);
+function mostrarTudo(){
+    const table1 = table.value;
+    console.log(table1);
 
   //cabeçalho que vai no fecth
    const options = {
@@ -20,22 +23,22 @@ table.addEventListener('load', (e) =>{
 
     //fetch
    
-    fetch(`http://localhost:8080/estados`, options)
+    fetch("http://localhost:8080/estados", options)
     .then(response => {response.json()
-    .then(data => table.replaceWith(data))
+    .then(data => atribuirCampos(data))
     })
     .catch(e => console.log("Deu erro: " + e))
-    })
+    }
 
 
     function atribuirCampos(data)
     {
-    const idEstado = document.querySelector('#codigo');
-    const nomeUsuario = document.querySelector('#nomeEstado');
+    const codigo = document.querySelector('#codigo');
+    const nomeUsuario = document.querySelector('#nome_estado');
 
-    idEstado.value = data.idEstado;
+    codigo.value = data.codigo;
     nomeUsuario.value = data.nomeEstado;
-    table.replaceWith(idEstado, nomeUsuario);
+    table1.replaceWith(codigo, nomeUsuario);
     }
 
 
